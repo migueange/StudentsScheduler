@@ -1,0 +1,79 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: miguel
+      changes:
+        - createTable:
+            tableName: STUDENT
+            columns:
+              - column:
+                  name: STUDENT_ID
+                  type: UUID
+                  remarks: The student's ID
+                  constraints:
+                    nullable: false
+              - column:
+                  name: STUDENT_FIRST_NAME
+                  type: TEXT
+              - column:
+                  name: STUDENT_LAST_NAME
+                  type: TEXT
+        - addPrimaryKey:
+            columnNames: STUDENT_ID
+            constraintName: PK_STUDENT_ID
+            tableName: STUDENT
+        - createTable:
+            tableName: COURSE
+            columns:
+              - column:
+                  name: COURSE_CODE
+                  type: UUID
+                  remarks: The course's ID
+                  constraints:
+                    nullable: false
+              - column:
+                  name: COURSE_TITLE
+                  type: TEXT
+              - column:
+                  name: COURSE_DESCRIPTION
+                  type: TEXT
+        - addPrimaryKey:
+            columnNames: COURSE_CODE
+            constraintName: PK_COURSE_CODE
+            tableName: COURSE
+        - createTable:
+            tableName: STUDENT_ATTENDS
+            columns:
+              - column:
+                  name: STUDENT_ATTENDS_ID
+                  type: UUID
+                  remarks: The STUDENT_ATTENDS_ID ID
+                  constraints:
+                    nullable: false
+              - column:
+                  name: FK_STUDENT_ID
+                  type: UUID
+              - column:
+                  name: FK_COURSE_CODE
+                  type: UUID
+              - addPrimaryKey:
+                  columnNames: FK_STUDENT_ID,FK_COURSE_CODE
+                  constraintName: PK_STUDENT_ATTENDS_ID
+                  tableName: STUDENT_ATTENDS
+              - addForeignKeyConstraint:
+                  baseColumnNames: FK_STUDENT_ID
+                  baseTableName: STUDENT_ATTENDS
+                  constraintName: FK_STUDENT_ID
+                  onDelete: CASCADE
+                  onUpdate: RESTRICT
+                  referencedColumnNames: STUDENT_ID
+                  referencedTableName: STUDENT
+              - addForeignKeyConstraint:
+                  baseColumnNames: FK_COURSE_CODE
+                  baseTableName: STUDENT_ATTENDS
+                  constraintName: FK_COURSE_CODE
+                  onDelete: CASCADE
+                  onUpdate: RESTRICT
+                  referencedColumnNames: COURSE_CODE
+                  referencedTableName: COURSE
+
