@@ -6,7 +6,10 @@ This project is built with Maven, Spring Boot, JPA, H2 and java 8.
 To run the project you can run the next command:
 mvn clean spring-boot:run
 
-In order to test the REST API endpoints, I used Postman:
+Persistence for this project is provided by H2 in memory database, so you don't need to setup any database in your system.
+
+I used Postman in order to test the REST API endpoints:
+
 Here is the datail for every service:
 
 STUDENTS:
