@@ -52,7 +52,7 @@ COURSES
 
 - DELETE http://localhost:8080/course/3241cf0f-28c7-4528-a5f9-fdba2df0592f deletes a course given the course UUID.
 
-. PATCH http://localhost:8080/course/ Updates a course given the UUID and the updated fields.
+- PATCH http://localhost:8080/course/ Updates a course given the UUID and the updated fields.
 
     Payload Example:
 {
@@ -75,5 +75,5 @@ STUDENT SUBSCRIPTIONS:
 
 - GET http://localhost:8080/student/courses/31448c64-0d05-40b1-aaf2-9e015e9fdca8 Retrieves all the Student's courses given its UUID.
 
--GET http://localhost:8080/course/student/206c7d37-0cf0-4b28-85be-0314c87f8f1d Retrieves all the Students from some course given the course UUID.
+- GET http://localhost:8080/course/student/206c7d37-0cf0-4b28-85be-0314c87f8f1d Retrieves all the Students from some course given the course UUID.
 
