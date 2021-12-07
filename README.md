@@ -13,7 +13,7 @@ STUDENTS:
 
 - POST  http://localhost:8080/student Creates and student.
 
-Payload example:
+    Payload example:
 {
     "studentFirstName": "Miguel",
     "studentLastName": "Mendoza"
@@ -27,7 +27,7 @@ Payload example:
 
 - PATCH http://localhost:8080/student updates an Student given the UUID and the updated fields.
 
-Payload example:
+    Payload example:
 {
     "studentId": "e969ab67-6405-4a70-876b-e3e222eb0876",
     "studentFirstName": "Pilar",
@@ -40,7 +40,7 @@ COURSES
 
 - POST http://localhost:8080/course Creates a Course.
 
-Payload Example:
+    Payload Example:
 {
     "courseTitle":"ENGLISH",
     "courseDescription":"ENGLISH 1"
@@ -54,7 +54,7 @@ Payload Example:
 
 . PATCH http://localhost:8080/course/ Updates a course given the UUID and the updated fields.
 
-Payload Example:
+    Payload Example:
 {
     "courseCode": "9c619f95-90b2-48c3-9d97-3ace2485fc94",
     "courseTitle": "ENGLISH",
@@ -67,7 +67,7 @@ STUDENT SUBSCRIPTIONS:
 
 - POST http://localhost:8080/subscribe/ Subscribe an Student into a course given the UUIDS.
 
-Payload example:
+    Payload example:
 {
     "fkStudentId": "69c42b58-3ad3-444e-9de4-b6bd40e22caa",
     "fkCourseCode": "206c7d37-0cf0-4b28-85be-0314c87f8f1d"
