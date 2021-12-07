@@ -12,6 +12,7 @@ Here is the datail for every service:
 STUDENTS:
 
 - POST  http://localhost:8080/student Creates and student.
+
 Payload example:
 {
     "studentFirstName": "Miguel",
@@ -25,6 +26,7 @@ Payload example:
 - DELETE http://localhost:8080/student/f9af4f64-c4cd-4dc6-9e08-477ee714139c deletes an Student given the UUID.
 
 - PATCH http://localhost:8080/student updates an Student given the UUID and the updated fields.
+
 Payload example:
 {
     "studentId": "e969ab67-6405-4a70-876b-e3e222eb0876",
@@ -37,6 +39,7 @@ Payload example:
 COURSES
 
 - POST http://localhost:8080/course Creates a Course.
+
 Payload Example:
 {
     "courseTitle":"ENGLISH",
@@ -50,6 +53,7 @@ Payload Example:
 - DELETE http://localhost:8080/course/3241cf0f-28c7-4528-a5f9-fdba2df0592f deletes a course given the course UUID.
 
 . PATCH http://localhost:8080/course/ Updates a course given the UUID and the updated fields.
+
 Payload Example:
 {
     "courseCode": "9c619f95-90b2-48c3-9d97-3ace2485fc94",
@@ -62,6 +66,7 @@ Payload Example:
 STUDENT SUBSCRIPTIONS:
 
 - POST http://localhost:8080/subscribe/ Subscribe an Student into a course given the UUIDS.
+
 Payload example:
 {
     "fkStudentId": "69c42b58-3ad3-444e-9de4-b6bd40e22caa",
